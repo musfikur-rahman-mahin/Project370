@@ -9,12 +9,13 @@ CREATE TABLE Admin (
 CREATE TABLE user (
     u_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
     pass VARCHAR(100) NOT NULL,
-    coin INT DEFAULT 0,
+    number INT NOT NULL,
+    coin INT DEFAULT u_,
     flag BOOLEAN DEFAULT FALSE,
     duration INT
 );
-
 
 -- Game table
 CREATE TABLE Game (
