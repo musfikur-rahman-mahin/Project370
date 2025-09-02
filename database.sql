@@ -107,4 +107,14 @@ CREATE TABLE Enlist (
     FOREIGN KEY (game_id) REFERENCES Game(game_id),
     FOREIGN KEY (u_id) REFERENCES user(u_id)
 );
-
+INSERT INTO Game (name, description, rating, price, space) VALUES 
+('Sky Legends', 'An open-world aerial combat simulator with customizable aircraft.', 4.75, 49.99, 45000),
+('Dungeon Echoes', 'A dark fantasy RPG with rich lore and turn-based combat.', 4.32, 59.99, 65000),
+('Pixel Farm', 'A relaxing farming simulator with pixel-style graphics and daily quests.', 3.89, 19.99, 15000),
+('Cyber Strike', 'A fast-paced multiplayer FPS set in a futuristic cyberpunk world.', 4.61, 39.99, 52000),
+('Tower Architect', 'Design and manage the world\'s tallest skyscrapers in this strategy sim.', 4.10, 24.99, 28000),
+('Alien Botanist', 'Grow alien plants and study ecosystems on distant planets.', 3.75, 29.99, 32000),
+('Robo Kart', 'High-octane racing with customizable robot drivers.', 4.28, 44.99, 39000),
+('Mystic Trails', 'An exploration-based puzzle game through enchanted forests and ancient ruins.', 4.50, 34.99, 26000),
+('Shadow Operative', 'Stealth-based action with spy gadgets and global missions.', 4.67, 54.99, 47000),
+('Battle Chess 3000', 'Classic chess with futuristic pieces and combat animations.', 3.95, 14.99, 12000);
