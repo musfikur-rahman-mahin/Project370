@@ -11,7 +11,6 @@ CREATE TABLE user (
     name VARCHAR(100) NOT NULL,
     email VARCHAR(150) NOT NULL,
     pass VARCHAR(100) NOT NULL,
-    number INT NOT NULL,
     coin INT DEFAULT u_,
     flag BOOLEAN DEFAULT FALSE,
     duration INT
