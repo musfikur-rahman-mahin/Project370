@@ -33,8 +33,8 @@ $name = $row['name'];
     <nav>
         <a href="../game/gallery.php">View Games</a> |
         <a href="user_games.php">My Games</a> |
-        <a href="threads.php">View Threads</a> |
-        <a href="create_thread.php">Create Thread</a> |
+        <a href="../thread/threads.php">View Threads</a> |
+        <a href="../thread/create_thread.php">Create Thread</a> |
         <a href="friends.php">Friends</a> |
         <a href="add_coins.php">Add Coins</a> |
         <a href="marekplace.php">Marketplace</a> |
