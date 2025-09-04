@@ -33,6 +33,7 @@ CREATE TABLE Thread (
     u_id INT,
     flag BOOLEAN DEFAULT FALSE,
     admin_id INT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (u_id) REFERENCES user(u_id),
     FOREIGN KEY (admin_id) REFERENCES Admin(admin_id)
 );
@@ -42,6 +43,9 @@ CREATE TABLE Thread_Comments (
     comment_id INT AUTO_INCREMENT PRIMARY KEY,
     thread_id INT,
     comments TEXT NOT NULL,
+    u_id INT,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (u_id) REFERENCES user(u_id),
     FOREIGN KEY (thread_id) REFERENCES Thread(thread_id)
 );
 
