@@ -21,7 +21,7 @@ CREATE TABLE Game (
     game_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     description TEXT,
-    rating DECIMAL(3,2),
+    rating DECIMAL(3,2) DEAFULT 0.00,
     price DECIMAL(10,2),
     space DECIMAL(10,2)
 );
