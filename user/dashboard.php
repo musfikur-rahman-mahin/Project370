@@ -1,0 +1,45 @@
+<?php
+include '../connect.php';
+
+session_start();
+if (!isset($_SESSION['u_id']) || $_SESSION['type'] != 'user') {
+    header("Location: index.php");  // Redirect if not logged in as user
+}
+
+
+$u_id = $_SESSION['u_id'];
+
+// Get user coins (Read)
+$sql = "SELECT coin, name FROM user WHERE u_id=$u_id";
+// sql query
+$result = $conn->query($sql);
+$row = $result->fetch_assoc();
+$coins = $row['coin'];
+$name = $row['name'];
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <p>User name: <?php echo $name;?></p>
+    <p>coins: <?php echo $coins; ?></p>
+    <nav>
+        <a href="../game/gallery.php">View Games</a> |
+        <a href="user_games.php">My Games</a> |
+        <a href="threads.php">View Threads</a> |
+        <a href="create_thread.php">Create Thread</a> |
+        <a href="friends.php">Friends</a> |
+        <a href="add_coins.php">Add Coins</a> |
+        <a href="marekplace.php">Marketplace</a> |
+        <a href="../logout.php">Logout</a>
+    </nav>
+</body>
+</html>
+
