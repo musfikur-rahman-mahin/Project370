@@ -12,8 +12,7 @@ CREATE TABLE user (
     email VARCHAR(150) NOT NULL,
     pass VARCHAR(100) NOT NULL,
     coin INT NOT NULL DEFAULT 0,
-    flag BOOLEAN DEFAULT FALSE,
-    ban_until DATETIME DEFAULT NULL
+    flag BOOLEAN DEFAULT FALSE
 );
 
 -- Game table
